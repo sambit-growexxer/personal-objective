@@ -1,0 +1,20 @@
+app.controller('HeaderController', function($scope, $location) {
+    $scope.menuOptions = [
+      { label: 'Home', link: '#!/home' }
+    ];
+
+    $scope.userOptions = [
+      { label: 'Sign Out', action: 'signOut' }
+    ];
+
+    $scope.isLoggedIn = !!localStorage.getItem('jwtToken');
+
+    $scope.performAction = function(action) {
+        if (action === 'signOut') {
+          localStorage.removeItem('jwtToken');
+          $scope.isLoggedIn = false;
+          $location.path('/login');
+        }
+      };
+  });
+  

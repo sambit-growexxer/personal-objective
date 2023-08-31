@@ -1,0 +1,94 @@
+<div ng-include="'./common-components/header/header.html'"></div>
+<div ng-controller="UserController" class="container">
+    <button class="btn btn-primary btn-add" ng-click="addNewItem()">Add New Item</button>
+    <button class="btn btn-primary btn-filter" ng-click="toggleCollapse()">Filter</button>
+    <div class="collapse" ng-class="{'show': isCollapsed}">
+        <div class="card card-body">
+            <div class="row">
+                <div class="col-md-6">
+                    <div class="form-group">
+                        <label for="nameInput">Name:</label>
+                        <input type="text" id="nameInput" ng-model="searchKeywords.name" placeholder="Search Name"
+                            class="form-control">
+                    </div>
+                </div>
+                <div class="col-md-6">
+                    <div class="form-group">
+                        <label for="descriptionInput">Description:</label>
+                        <input type="text" id="descriptionInput" ng-model="searchKeywords.description"
+                            placeholder="Search Description" class="form-control">
+                    </div>
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-md-6">
+                    <div class="form-group">
+                        <label for="priceInput">Price:</label>
+                        <input type="text" id="priceInput" ng-model="searchKeywords.price" placeholder="Search Price"
+                            class="form-control">
+                    </div>
+                </div>
+                <div class="col-md-6">
+                    <div class="form-group">
+                        <label for="quantityInput">Quantity:</label>
+                        <input type="text" id="quantityInput" ng-model="searchKeywords.quantity"
+                            placeholder="Search Quantity" class="form-control">
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="table-container table-responsive">
+        <table class="table table-striped sticky-header">
+            <thead>
+                <tr>
+                    <th ng-click="sortTable('id')">ID <i
+                            ng-class="{'fa-sort-up': sortBy === 'id' && !reverse, 'fa-sort-down': sortBy === 'id' && reverse}"
+                            class="fas"></i></th>
+                    <th ng-click="sortTable('name')">Name <i
+                            ng-class="{'fa-sort-up': sortBy === 'name' && !reverse, 'fa-sort-down': sortBy === 'name' && reverse}"
+                            class="fas"></i></th>
+                    <th ng-click="sortTable('description')">Description <i
+                            ng-class="{'fa-sort-up': sortBy === 'description' && !reverse, 'fa-sort-down': sortBy === 'description' && reverse}"
+                            class="fas"></i></th>
+                    <th ng-click="sortTable('price')">Price <i
+                            ng-class="{'fa-sort-up': sortBy === 'price' && !reverse, 'fa-sort-down': sortBy === 'price' && reverse}"
+                            class="fas"></i></th>
+                    <th ng-click="sortTable('quantity')">Quantity <i
+                            ng-class="{'fa-sort-up': sortBy === 'quantity' && !reverse, 'fa-sort-down': sortBy === 'quantity' && reverse}"
+                            class="fas"></i></th>
+                    <th>Action</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr ng-repeat="item in filteredItems() | orderBy:sortBy:reverse"
+                    ng-class="{ 'editing-row': item.editing }">
+                    <td>{{ item.id }}</td>
+                    <td>
+                        <span ng-if="!item.editing">{{ item.name }}</span>
+                        <input ng-model="item.name" ng-if="item.editing" />
+                    </td>
+                    <td>
+                        <span ng-if="!item.editing">{{ item.description }}</span>
+                        <input ng-model="item.description" ng-if="item.editing" />
+                    </td>
+                    <td>
+                        <span ng-if="!item.editing">{{ item.price }}</span>
+                        <input ng-model="item.price" ng-if="item.editing" />
+                    </td>
+                    <td>
+                        <span ng-if="!item.editing">{{ item.quantity }}</span>
+                        <input ng-model="item.quantity" ng-if="item.editing" />
+                    </td>
+                    <td>
+                        <button class="btn btn-success" ng-if="item.editing"
+                            ng-click="item.editing = false">Save</button>
+                        <button class="btn btn-primary" ng-if="!item.editing"
+                            ng-click="item.editing = true">Edit</button>
+                        <button class="btn btn-danger" ng-click="deleteItem(item)">Delete</button>
+                    </td>
+                </tr>
+            </tbody>
+        </table>
+    </div>
+</div>

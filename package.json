@@ -1,0 +1,22 @@
+{
+  "name": "my-angular-app",
+  "version": "1.0.0",
+  "description": "personal objective",
+  "main": "index.js",
+  "scripts": {
+    "test": "test run"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/sambit-growexxer/personal-objective.git"
+  },
+  "keywords": [
+    "angularjs"
+  ],
+  "author": "sambit",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/sambit-growexxer/personal-objective/issues"
+  },
+  "homepage": "https://github.com/sambit-growexxer/personal-objective#readme"
+}

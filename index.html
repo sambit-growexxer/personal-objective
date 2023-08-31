@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <title>Personal Objective</title>
+
+    <!-- Include Bootstrap CSS -->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+    <!-- Include Font Awesome CSS -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.1/css/all.min.css">
+
+    <!-- Include App CSS -->
+    <link rel="icon" type="image/x-icon" href="">
+    <link rel="stylesheet" href="./css/crudView.css">
+
+    <!-- Include jQuery -->
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+
+    <!-- Include Bootstrap JavaScript -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+
+    <!-- Include AngularJS -->
+    <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.6.1/angular.min.js"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.6.1/angular-route.min.js"></script>
+
+    <!-- Include App Scripts -->
+    <script src="./js/app.js"></script>
+    <script src="./js/controllers.js"></script>
+    <script src="./components/login/loginController.js"></script>
+    <script src="./components/crud-component/userController.js"></script>
+    <script src="./common-components/header/headerController.js"></script>
+</head>
+
+<body>
+    <div ng-app="myApp">
+        <div ng-view></div>
+    </div>
+</body>
+
+</html>
