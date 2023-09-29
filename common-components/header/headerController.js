@@ -2,7 +2,9 @@ app.controller('HeaderController', function($scope, $location) {
     $scope.menuOptions = [
       { label: 'Home', link: '#!/home' },
       { label: 'Shipment', link: '#!/shipment' },
-      { label: 'Warehouse', link: '#!/warehouse' }
+      { label: 'Warehouse', link: '#!/warehouse' },
+      { label: 'Orders', link: '#!/orders' }
+
     ];
 
     $scope.userOptions = [

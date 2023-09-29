@@ -1,0 +1,177 @@
+[
+    {
+        "orderID": 1,
+        "customer": "John Smith",
+        "product": "Laptop",
+        "quantity": 2,
+        "totalAmount": 1200.00
+    },
+    {
+        "orderID": 2,
+        "customer": "Alice Johnson",
+        "product": "Smartphone",
+        "quantity": 3,
+        "totalAmount": 750.00
+    },
+    {
+        "orderID": 3,
+        "customer": "David Wilson",
+        "product": "Tablet",
+        "quantity": 1,
+        "totalAmount": 350.00
+    },
+    {
+        "orderID": 4,
+        "customer": "Emily Davis",
+        "product": "Desktop PC",
+        "quantity": 1,
+        "totalAmount": 900.00
+    },
+    {
+        "orderID": 5,
+        "customer": "Michael Brown",
+        "product": "Printer",
+        "quantity": 4,
+        "totalAmount": 400.00
+    },
+    {
+        "orderID": 6,
+        "customer": "Olivia Lee",
+        "product": "Monitor",
+        "quantity": 2,
+        "totalAmount": 300.00
+    },
+    {
+        "orderID": 7,
+        "customer": "Sophia Taylor",
+        "product": "Keyboard",
+        "quantity": 5,
+        "totalAmount": 100.00
+    },
+    {
+        "orderID": 8,
+        "customer": "Noah Martin",
+        "product": "Mouse",
+        "quantity": 6,
+        "totalAmount": 60.00
+    },
+    {
+        "orderID": 9,
+        "customer": "Emma White",
+        "product": "Headphones",
+        "quantity": 2,
+        "totalAmount": 80.00
+    },
+    {
+        "orderID": 10,
+        "customer": "Liam Harris",
+        "product": "External Hard Drive",
+        "quantity": 1,
+        "totalAmount": 70.00
+    },
+    {
+        "orderID": 11,
+        "customer": "Ava Anderson",
+        "product": "Camera",
+        "quantity": 2,
+        "totalAmount": 500.00
+    },
+    {
+        "orderID": 12,
+        "customer": "William Martinez",
+        "product": "Router",
+        "quantity": 1,
+        "totalAmount": 40.00
+    },
+    {
+        "orderID": 13,
+        "customer": "Mia Moore",
+        "product": "Software",
+        "quantity": 3,
+        "totalAmount": 180.00
+    },
+    {
+        "orderID": 14,
+        "customer": "James Jackson",
+        "product": "Printer",
+        "quantity": 2,
+        "totalAmount": 200.00
+    },
+    {
+        "orderID": 15,
+        "customer": "Scarlett Garcia",
+        "product": "Tablet",
+        "quantity": 2,
+        "totalAmount": 300.00
+    },
+    {
+        "orderID": 16,
+        "customer": "Benjamin Clark",
+        "product": "Monitor",
+        "quantity": 1,
+        "totalAmount": 150.00
+    },
+    {
+        "orderID": 17,
+        "customer": "Grace Lewis",
+        "product": "Keyboard",
+        "quantity": 3,
+        "totalAmount": 60.00
+    },
+    {
+        "orderID": 18,
+        "customer": "Henry Hall",
+        "product": "Mouse",
+        "quantity": 4,
+        "totalAmount": 40.00
+    },
+    {
+        "orderID": 19,
+        "customer": "Chloe Turner",
+        "product": "Headphones",
+        "quantity": 2,
+        "totalAmount": 80.00
+    },
+    {
+        "orderID": 20,
+        "customer": "Ella Rodriguez",
+        "product": "External Hard Drive",
+        "quantity": 1,
+        "totalAmount": 70.00
+    },
+    {
+        "orderID": 21,
+        "customer": "Sebastian Scott",
+        "product": "Camera",
+        "quantity": 1,
+        "totalAmount": 250.00
+    },
+    {
+        "orderID": 22,
+        "customer": "Lily Adams",
+        "product": "Router",
+        "quantity": 1,
+        "totalAmount": 40.00
+    },
+    {
+        "orderID": 23,
+        "customer": "Jackson Walker",
+        "product": "Software",
+        "quantity": 2,
+        "totalAmount": 120.00
+    },
+    {
+        "orderID": 24,
+        "customer": "Avery Green",
+        "product": "Laptop",
+        "quantity": 1,
+        "totalAmount": 600.00
+    },
+    {
+        "orderID": 25,
+        "customer": "Sofia Hall",
+        "product": "Smartphone",
+        "quantity": 2,
+        "totalAmount": 500.00
+    }
+]

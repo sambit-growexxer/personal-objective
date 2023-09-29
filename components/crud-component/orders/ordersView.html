@@ -1,0 +1,76 @@
+<div ng-include="'./common-components/header/header.html'"></div>
+<div ng-controller="OrderController" class="container">
+    <button class="btn btn-primary btn-add" ng-click="addNewOrder()">Add New Order</button>
+    <button class="btn btn-primary btn-filter" ng-click="toggleCollapse()">Filter</button>
+    <div class="collapse" ng-class="{'show': isCollapsed}">
+        <div class="card card-body">
+            <div class="row">
+                <div class="col-md-4">
+                    <div class="form-group">
+                        <label for="customerInput">Customer:</label>
+                        <input type="text" id="customerInput" ng-model="searchKeywords.customer"
+                            placeholder="Search Customer" class="form-control">
+                    </div>
+                </div>
+                <div class="col-md-4">
+                    <div class="form-group">
+                        <label for="productInput">Product:</label>
+                        <input type="text" id="productInput" ng-model="searchKeywords.product"
+                            placeholder="Search Product" class="form-control">
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="table-container table-responsive">
+        <table class="table table-striped sticky-header">
+            <thead>
+                <tr>
+                    <th ng-click="sortTable('orderID')">Order ID <i
+                            ng-class="{'fa-sort-up': sortBy === 'orderID' && !reverse, 'fa-sort-down': sortBy === 'orderID' && reverse}"
+                            class="fas"></i></th>
+                    <th ng-click="sortTable('customer')">Customer <i
+                            ng-class="{'fa-sort-up': sortBy === 'customer' && !reverse, 'fa-sort-down': sortBy === 'customer' && reverse}"
+                            class="fas"></i></th>
+                    <th ng-click="sortTable('product')">Product <i
+                            ng-class="{'fa-sort-up': sortBy === 'product' && !reverse, 'fa-sort-down': sortBy === 'product' && reverse}"
+                            class="fas"></i></th>
+                    <th ng-click="sortTable('quantity')">Quantity <i
+                            ng-class="{'fa-sort-up': sortBy === 'quantity' && !reverse, 'fa-sort-down': sortBy === 'quantity' && reverse}"
+                            class="fas"></i></th>
+                    <th ng-click="sortTable('totalAmount')">Total Amount <i
+                            ng-class="{'fa-sort-up': sortBy === 'totalAmount' && !reverse, 'fa-sort-down': sortBy === 'totalAmount' && reverse}"
+                            class="fas"></i></th>
+                    <th>Action</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr ng-repeat="order in filteredOrders() | orderBy:sortBy:reverse"
+                    ng-class="{ 'editing-row': order.editing }">
+                    <td>{{ order.orderID }}</td>
+                    <td>
+                        <span ng-if="!order.editing">{{ order.customer }}</span>
+                        <input ng-model="order.customer" ng-if="order.editing" />
+                    </td>
+                    <td>
+                        <span ng-if="!order.editing">{{ order.product }}</span>
+                        <input ng-model="order.product" ng-if="order.editing" />
+                    </td>
+                    <td>
+                        <span ng-if="!order.editing">{{ order.quantity }}</span>
+                        <input ng-model="order.quantity" ng-if="order.editing" />
+                    </td>
+                    <td>
+                        <span ng-if="!order.editing">{{ order.totalAmount }}</span>
+                        <input ng-model="order.totalAmount" ng-if="order.editing" />
+                    </td>
+                    <td>
+                        <button class="btn btn-success" ng-if="order.editing" ng-click="saveOrder(order)">Save</button>
+                        <button class="btn btn-primary" ng-if="!order.editing" ng-click="editOrder(order)">Edit</button>
+                        <button class="btn btn-danger" ng-click="deleteOrder(order)">Delete</button>
+                    </td>
+                </tr>
+            </tbody>
+        </table>
+    </div>
+</div>
