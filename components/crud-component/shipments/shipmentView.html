@@ -1,0 +1,80 @@
+<div ng-include="'./common-components/header/header.html'"></div>
+<div ng-controller="ShipmentController" class="container">
+    <button class="btn btn-primary btn-add" ng-click="addNewShipment()">Add New Shipment</button>
+    <button class="btn btn-primary btn-filter" ng-click="toggleCollapse()">Filter</button>
+    <div class="collapse" ng-class="{'show': isCollapsed}">
+        <div class="card card-body">
+            <div class="row">
+                <div class="col-md-6">
+                    <div class="form-group">
+                        <label for="senderInput">Sender:</label>
+                        <input type="text" id="senderInput" ng-model="searchKeywords.sender"
+                            placeholder="Search Sender" class="form-control">
+                    </div>
+                </div>
+                <div class="col-md-6">
+                    <div class="form-group">
+                        <label for="receiverInput">Receiver:</label>
+                        <input type="text" id="receiverInput" ng-model="searchKeywords.receiver"
+                            placeholder="Search Receiver" class="form-control">
+                    </div>
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-md-6">
+                    <div class="form-group">
+                        <label for="statusInput">Status:</label>
+                        <input type="text" id="statusInput" ng-model="searchKeywords.status"
+                            placeholder="Search Status" class="form-control">
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="table-container table-responsive">
+        <table class="table table-striped sticky-header">
+            <thead>
+                <tr>
+                    <th ng-click="sortTable('shipmentID')">Shipment ID <i
+                            ng-class="{'fa-sort-up': sortBy === 'shipmentID' && !reverse, 'fa-sort-down': sortBy === 'shipmentID' && reverse}"
+                            class="fas"></i></th>
+                    <th ng-click="sortTable('sender')">Sender <i
+                            ng-class="{'fa-sort-up': sortBy === 'sender' && !reverse, 'fa-sort-down': sortBy === 'sender' && reverse}"
+                            class="fas"></i></th>
+                    <th ng-click="sortTable('receiver')">Receiver <i
+                            ng-class="{'fa-sort-up': sortBy === 'receiver' && !reverse, 'fa-sort-down': sortBy === 'receiver' && reverse}"
+                            class="fas"></i></th>
+                    <th ng-click="sortTable('status')">Status <i
+                            ng-class="{'fa-sort-up': sortBy === 'status' && !reverse, 'fa-sort-down': sortBy === 'status' && reverse}"
+                            class="fas"></i></th>
+                    <th>Action</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr ng-repeat="shipment in filteredShipments() | orderBy:sortBy:reverse"
+                    ng-class="{ 'editing-row': shipment.editing }">
+                    <td>{{ shipment.shipmentID }}</td>
+                    <td>
+                        <span ng-if="!shipment.editing">{{ shipment.sender }}</span>
+                        <input ng-model="shipment.sender" ng-if="shipment.editing" />
+                    </td>
+                    <td>
+                        <span ng-if="!shipment.editing">{{ shipment.receiver }}</span>
+                        <input ng-model="shipment.receiver" ng-if="shipment.editing" />
+                    </td>
+                    <td>
+                        <span ng-if="!shipment.editing">{{ shipment.status }}</span>
+                        <input ng-model="shipment.status" ng-if="shipment.editing" />
+                    </td>
+                    <td>
+                        <button class="btn btn-success" ng-if="shipment.editing"
+                            ng-click="saveShipment(shipment)">Save</button>
+                        <button class="btn btn-primary" ng-if="!shipment.editing"
+                            ng-click="editShipment(shipment)">Edit</button>
+                        <button class="btn btn-danger" ng-click="deleteShipment(shipment)">Delete</button>
+                    </td>
+                </tr>
+            </tbody>
+        </table>
+    </div>
+</div>
