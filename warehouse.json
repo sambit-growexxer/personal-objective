@@ -1,0 +1,212 @@
+[
+    {
+        "warehouseID": 10001,
+        "location": "North Warehouse",
+        "capacity": 5000,
+        "inventory": "Electronics",
+        "staff": "John Doe"
+    },
+    {
+        "warehouseID": 10002,
+        "location": "South Warehouse",
+        "capacity": 8000,
+        "inventory": "Clothing",
+        "staff": "Jane Smith"
+    },
+    {
+        "warehouseID": 10003,
+        "location": "East Warehouse",
+        "capacity": 3000,
+        "inventory": "Food",
+        "staff": "Mike Johnson"
+    },
+    {
+        "warehouseID": 10004,
+        "location": "West Warehouse",
+        "capacity": 6000,
+        "inventory": "Furniture",
+        "staff": "Emily Davis"
+    },
+    {
+        "warehouseID": 10005,
+        "location": "Central Warehouse",
+        "capacity": 7000,
+        "inventory": "Automotive",
+        "staff": "David Wilson"
+    },
+    {
+        "warehouseID": 10006,
+        "location": "Main Warehouse",
+        "capacity": 5500,
+        "inventory": "Books",
+        "staff": "Sarah Adams"
+    },
+    {
+        "warehouseID": 10007,
+        "location": "Warehouse 7",
+        "capacity": 4500,
+        "inventory": "Toys",
+        "staff": "Michael Lee"
+    },
+    {
+        "warehouseID": 10008,
+        "location": "Warehouse 8",
+        "capacity": 9000,
+        "inventory": "Appliances",
+        "staff": "Linda Clark"
+    },
+    {
+        "warehouseID": 10009,
+        "location": "Warehouse 9",
+        "capacity": 3500,
+        "inventory": "Sports Equipment",
+        "staff": "Richard Turner"
+    },
+    {
+        "warehouseID": 10010,
+        "location": "Warehouse 10",
+        "capacity": 7500,
+        "inventory": "Healthcare",
+        "staff": "Susan White"
+    },
+    {
+        "warehouseID": 10011,
+        "location": "Warehouse 11",
+        "capacity": 4000,
+        "inventory": "Home Decor",
+        "staff": "Daniel Parker"
+    },
+    {
+        "warehouseID": 10012,
+        "location": "Warehouse 12",
+        "capacity": 5200,
+        "inventory": "Jewelry",
+        "staff": "Karen Martin"
+    },
+    {
+        "warehouseID": 10013,
+        "location": "Warehouse 13",
+        "capacity": 6300,
+        "inventory": "Musical Instruments",
+        "staff": "Joseph Anderson"
+    },
+    {
+        "warehouseID": 10014,
+        "location": "Warehouse 14",
+        "capacity": 4800,
+        "inventory": "Pet Supplies",
+        "staff": "Nancy Lewis"
+    },
+    {
+        "warehouseID": 10015,
+        "location": "Warehouse 15",
+        "capacity": 5800,
+        "inventory": "Office Supplies",
+        "staff": "William Moore"
+    },
+    {
+        "warehouseID": 10016,
+        "location": "Warehouse 16",
+        "capacity": 7200,
+        "inventory": "Garden Tools",
+        "staff": "Jessica Taylor"
+    },
+    {
+        "warehouseID": 10017,
+        "location": "Warehouse 17",
+        "capacity": 6800,
+        "inventory": "Electrical Supplies",
+        "staff": "Mark Brown"
+    },
+    {
+        "warehouseID": 10018,
+        "location": "Warehouse 18",
+        "capacity": 4300,
+        "inventory": "Paints and Coatings",
+        "staff": "Patricia Jackson"
+    },
+    {
+        "warehouseID": 10019,
+        "location": "Warehouse 19",
+        "capacity": 6700,
+        "inventory": "Industrial Equipment",
+        "staff": "Kevin Harris"
+    },
+    {
+        "warehouseID": 10020,
+        "location": "Warehouse 20",
+        "capacity": 4900,
+        "inventory": "Medical Supplies",
+        "staff": "Catherine Garcia"
+    },
+    {
+        "warehouseID": 10021,
+        "location": "Warehouse 21",
+        "capacity": 6000,
+        "inventory": "Outdoor Gear",
+        "staff": "Robert Allen"
+    },
+    {
+        "warehouseID": 10022,
+        "location": "Warehouse 22",
+        "capacity": 4300,
+        "inventory": "Art and Craft Supplies",
+        "staff": "Laura Martinez"
+    },
+    {
+        "warehouseID": 10023,
+        "location": "Warehouse 23",
+        "capacity": 5200,
+        "inventory": "Kitchen Appliances",
+        "staff": "Christopher Young"
+    },
+    {
+        "warehouseID": 10024,
+        "location": "Warehouse 24",
+        "capacity": 4800,
+        "inventory": "Home Furniture",
+        "staff": "Amanda Robinson"
+    },
+    {
+        "warehouseID": 10025,
+        "location": "Warehouse 25",
+        "capacity": 7800,
+        "inventory": "Toiletries",
+        "staff": "Thomas Hall"
+    },
+    {
+        "warehouseID": 10026,
+        "location": "Warehouse 26",
+        "capacity": 3800,
+        "inventory": "Automotive Parts",
+        "staff": "Jennifer Wood"
+    },
+    {
+        "warehouseID": 10027,
+        "location": "Warehouse 27",
+        "capacity": 4400,
+        "inventory": "Baby Products",
+        "staff": "Charles Davis"
+    },
+    {
+        "warehouseID": 10028,
+        "location": "Warehouse 28",
+        "capacity": 6900,
+        "inventory": "Clothing Accessories",
+        "staff": "Elizabeth Garcia"
+    },
+    {
+        "warehouseID": 10029,
+        "location": "Warehouse 29",
+        "capacity": 5800,
+        "inventory": "Footwear",
+        "staff": "John Walker"
+    },
+    {
+        "warehouseID": 10030,
+        "location": "Warehouse 30",
+        "capacity": 5500,
+        "inventory": "Home Improvement",
+        "staff": "Olivia Martin"
+    }
+]

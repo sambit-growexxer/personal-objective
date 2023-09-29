@@ -1,0 +1,94 @@
+<div ng-include="'./common-components/header/header.html'"></div>
+<div ng-controller="WarehouseController" class="container">
+    <button class="btn btn-primary btn-add" ng-click="addNewWarehouse()">Add New Warehouse</button>
+    <button class="btn btn-primary btn-filter" ng-click="toggleCollapse()">Filter</button>
+    <div class="collapse" ng-class="{'show': isCollapsed}">
+        <div class="card card-body">
+            <div class="row">
+                <div class="col-md-6">
+                    <div class="form-group">
+                        <label for="locationInput">Location:</label>
+                        <input type="text" id="locationInput" ng-model="searchKeywords.location"
+                            placeholder="Search Location" class="form-control">
+                    </div>
+                </div>
+                <div class="col-md-6">
+                    <div class="form-group">
+                        <label for="capacityInput">Capacity:</label>
+                        <input type="text" id="capacityInput" ng-model="searchKeywords.capacity"
+                            placeholder="Search Capacity" class="form-control">
+                    </div>
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-md-6">
+                    <div class="form-group">
+                        <label for="inventoryInput">Inventory:</label>
+                        <input type="text" id="inventoryInput" ng-model="searchKeywords.inventory"
+                            placeholder="Search Inventory" class="form-control">
+                    </div>
+                </div>
+                <div class="col-md-6">
+                    <div class="form-group">
+                        <label for="staffInput">Staff:</label>
+                        <input type="text" id="staffInput" ng-model="searchKeywords.staff" placeholder="Search Staff"
+                            class="form-control">
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="table-container table-responsive">
+        <table class="table table-striped sticky-header">
+            <thead>
+                <tr>
+                    <th ng-click="sortTable('warehouseID')">Warehouse ID <i
+                            ng-class="{'fa-sort-up': sortBy === 'warehouseID' && !reverse, 'fa-sort-down': sortBy === 'warehouseID' && reverse}"
+                            class="fas"></i></th>
+                    <th ng-click="sortTable('location')">Location <i
+                            ng-class="{'fa-sort-up': sortBy === 'location' && !reverse, 'fa-sort-down': sortBy === 'location' && reverse}"
+                            class="fas"></i></th>
+                    <th ng-click="sortTable('capacity')">Capacity <i
+                            ng-class="{'fa-sort-up': sortBy === 'capacity' && !reverse, 'fa-sort-down': sortBy === 'capacity' && reverse}"
+                            class="fas"></i></th>
+                    <th ng-click="sortTable('inventory')">Inventory <i
+                            ng-class="{'fa-sort-up': sortBy === 'inventory' && !reverse, 'fa-sort-down': sortBy === 'inventory' && reverse}"
+                            class="fas"></i></th>
+                    <th ng-click="sortTable('staff')">Staff <i
+                            ng-class="{'fa-sort-up': sortBy === 'staff' && !reverse, 'fa-sort-down': sortBy === 'staff' && reverse}"
+                            class="fas"></i></th>
+                    <th>Action</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr ng-repeat="warehouse in filteredWarehouses() | orderBy:sortBy:reverse"
+                    ng-class="{ 'editing-row': warehouse.editing }">
+                    <td>{{ warehouse.warehouseID }}</td>
+                    <td>
+                        <span ng-if="!warehouse.editing">{{ warehouse.location }}</span>
+                        <input ng-model="warehouse.location" ng-if="warehouse.editing" />
+                    </td>
+                    <td>
+                        <span ng-if="!warehouse.editing">{{ warehouse.capacity }}</span>
+                        <input ng-model="warehouse.capacity" ng-if="warehouse.editing" />
+                    </td>
+                    <td>
+                        <span ng-if="!warehouse.editing">{{ warehouse.inventory }}</span>
+                        <input ng-model="warehouse.inventory" ng-if="warehouse.editing" />
+                    </td>
+                    <td>
+                        <span ng-if="!warehouse.editing">{{ warehouse.staff }}</span>
+                        <input ng-model="warehouse.staff" ng-if="warehouse.editing" />
+                    </td>
+                    <td>
+                        <button class="btn btn-success" ng-if="warehouse.editing"
+                            ng-click="saveWarehouse(warehouse)">Save</button>
+                        <button class="btn btn-primary" ng-if="!warehouse.editing"
+                            ng-click="editWarehouse(warehouse)">Edit</button>
+                        <button class="btn btn-danger" ng-click="deleteWarehouse(warehouse)">Delete</button>
+                    </td>
+                </tr>
+            </tbody>
+        </table>
+    </div>
+</div>
