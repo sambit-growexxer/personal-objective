@@ -1,0 +1,32 @@
+[
+    {
+        "shipmentID": 1,
+        "sender": "ABC Electronics",
+        "receiver": "XYZ Corp",
+        "status": "In Transit"
+    },
+    {
+        "shipmentID": 2,
+        "sender": "Best Books Co.",
+        "receiver": "Readers Emporium",
+        "status": "Delivered"
+    },
+    {
+        "shipmentID": 3,
+        "sender": "FreshGroceries Inc.",
+        "receiver": "SuperMart",
+        "status": "Pending"
+    },
+    {
+        "shipmentID": 4,
+        "sender": "TechSupply Solutions",
+        "receiver": "Gadget World",
+        "status": "In Transit"
+    },
+    {
+        "shipmentID": 5,
+        "sender": "FashionHub",
+        "receiver": "Style Outlets",
+        "status": "Delivered"
+    }
+]

@@ -30,6 +30,13 @@ app.config(function ($routeProvider) {
         checkLoggedIn: checkLoggedIn
       }
     })
+    .when('/shipment', {
+      templateUrl: 'components/crud-component/shipments/shipmentView.html',
+      controller: 'ShipmentController',
+      resolve: {
+        checkLoggedIn: checkLoggedIn
+      }
+    })
     .when('/other', {
       templateUrl: 'components/other/otherView.html',
       controller: 'OtherController',
