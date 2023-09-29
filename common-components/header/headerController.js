@@ -3,8 +3,8 @@ app.controller('HeaderController', function($scope, $location) {
       { label: 'Home', link: '#!/home' },
       { label: 'Shipment', link: '#!/shipment' },
       { label: 'Warehouse', link: '#!/warehouse' },
-      { label: 'Orders', link: '#!/orders' }
-
+      { label: 'Orders', link: '#!/orders' },
+      { label: 'Customers', link: '#!/customers' }
     ];
 
     $scope.userOptions = [

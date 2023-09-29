@@ -1,4 +1,3 @@
-<div ng-include="'./common-components/header/header.html'"></div>
 <div ng-controller="OrderController" class="container">
     <button class="btn btn-primary btn-add" ng-click="addNewOrder()">Add New Order</button>
     <button class="btn btn-primary btn-filter" ng-click="toggleCollapse()">Filter</button>
@@ -58,11 +57,11 @@
                     </td>
                     <td>
                         <span ng-if="!order.editing">{{ order.quantity }}</span>
-                        <input ng-model="order.quantity" ng-if="order.editing" />
+                        <input ng-model="order.quantity" type="number" ng-if="order.editing" />
                     </td>
                     <td>
                         <span ng-if="!order.editing">{{ order.totalAmount }}</span>
-                        <input ng-model="order.totalAmount" ng-if="order.editing" />
+                        <input ng-model="order.totalAmount" type="number" ng-if="order.editing" />
                     </td>
                     <td>
                         <button class="btn btn-success" ng-if="order.editing" ng-click="saveOrder(order)">Save</button>

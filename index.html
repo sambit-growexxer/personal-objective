@@ -33,11 +33,12 @@
     <script src="./components/crud-component/shipments/shipmentController.js"></script>
     <script src="./components/crud-component/warehouse/warehouseController.js"></script>
     <script src="./components/crud-component/orders/ordersController.js"></script>
-
+    <script src="./components/crud-component/customers/customerController.js"></script>
 </head>
 
 <body>
     <div ng-app="myApp">
+        <div ng-include="'./common-components/header/header.html'"></div>
         <div ng-view></div>
     </div>
 </body>
