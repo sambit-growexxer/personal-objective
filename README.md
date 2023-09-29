@@ -5,7 +5,6 @@ Welcome to the Logistics Management System, an AngularJS application for efficie
 ## Features
 
 - **User Authentication:** Secure user authentication system with JSON file-based user credentials.
-- **Dashboard:** A responsive grid with sortable columns displaying key data from various entities.
 - **Entity Pages:** Dedicated pages for managing product, shipment, order, and customer information.
 - **CRUD Functionality:** Create, Read, Update, and Delete operations for each entity.
 - **Filters:** Filter data based on various criteria for easier data management.
