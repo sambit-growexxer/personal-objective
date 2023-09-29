@@ -1,0 +1,93 @@
+<div ng-controller="CustomerController" class="container">
+    <button class="btn btn-primary btn-add" ng-click="addNewCustomer()">Add New Customer</button>
+    <button class="btn btn-primary btn-filter" ng-click="toggleCollapse()">Filter</button>
+    <div class="collapse" ng-class="{'show': isCollapsed}">
+        <div class="card card-body">
+            <div class="row">
+                <div class="col-md-4">
+                    <div class="form-group">
+                        <label for="nameInput">Name:</label>
+                        <input type="text" id="nameInput" ng-model="searchKeywords.name" placeholder="Search Name"
+                            class="form-control">
+                    </div>
+                </div>
+                <div class="col-md-4">
+                    <div class="form-group">
+                        <label for="emailInput">Email:</label>
+                        <input type="text" id="emailInput" ng-model="searchKeywords.email" placeholder="Search Email"
+                            class="form-control">
+                    </div>
+                </div>
+                <div class="col-md-4">
+                    <div class="form-group">
+                        <label for="phoneInput">Phone:</label>
+                        <input type="text" id="phoneInput" ng-model="searchKeywords.phone" placeholder="Search Phone"
+                            class="form-control">
+                    </div>
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-md-4">
+                    <div class="form-group">
+                        <label for="addressInput">Address:</label>
+                        <input type="text" id="addressInput" ng-model="searchKeywords.address"
+                            placeholder="Search Address" class="form-control">
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="table-container table-responsive">
+        <table class="table table-striped sticky-header">
+            <thead>
+                <tr>
+                    <th ng-click="sortTable('customerID')">Customer ID <i
+                            ng-class="{'fa-sort-up': sortBy === 'customerID' && !reverse, 'fa-sort-down': sortBy === 'customerID' && reverse}"
+                            class="fas"></i></th>
+                    <th ng-click="sortTable('name')">Name <i
+                            ng-class="{'fa-sort-up': sortBy === 'name' && !reverse, 'fa-sort-down': sortBy === 'name' && reverse}"
+                            class="fas"></i></th>
+                    <th ng-click="sortTable('email')">Email <i
+                            ng-class="{'fa-sort-up': sortBy === 'email' && !reverse, 'fa-sort-down': sortBy === 'email' && reverse}"
+                            class="fas"></i></th>
+                    <th ng-click="sortTable('phone')">Phone <i
+                            ng-class="{'fa-sort-up': sortBy === 'phone' && !reverse, 'fa-sort-down': sortBy === 'phone' && reverse}"
+                            class="fas"></i></th>
+                    <th ng-click="sortTable('address')">Address <i
+                            ng-class="{'fa-sort-up': sortBy === 'address' && !reverse, 'fa-sort-down': sortBy === 'address' && reverse}"
+                            class="fas"></i></th>
+                    <th>Action</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr ng-repeat="customer in filteredCustomers() | orderBy:sortBy:reverse"
+                    ng-class="{ 'editing-row': customer.editing }">
+                    <td>{{ customer.customerID }}</td>
+                    <td>
+                        <span ng-if="!customer.editing">{{ customer.name }}</span>
+                        <input ng-model="customer.name" ng-if="customer.editing" />
+                    </td>
+                    <td>
+                        <span ng-if="!customer.editing">{{ customer.email }}</span>
+                        <input ng-model="customer.email" ng-if="customer.editing" />
+                    </td>
+                    <td>
+                        <span ng-if="!customer.editing">{{ customer.phone }}</span>
+                        <input ng-model="customer.phone" ng-if="customer.editing" />
+                    </td>
+                    <td>
+                        <span ng-if="!customer.editing">{{ customer.address }}</span>
+                        <input ng-model="customer.address" ng-if="customer.editing" />
+                    </td>
+                    <td>
+                        <button class="btn btn-success" ng-if="customer.editing"
+                            ng-click="saveCustomer(customer)">Save</button>
+                        <button class="btn btn-primary" ng-if="!customer.editing"
+                            ng-click="editCustomer(customer)">Edit</button>
+                        <button class="btn btn-danger" ng-click="deleteCustomer(customer)">Delete</button>
+                    </td>
+                </tr>
+            </tbody>
+        </table>
+    </div>
+</div>

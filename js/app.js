@@ -39,14 +39,21 @@ app.config(function ($routeProvider) {
     })
     .when('/warehouse', {
       templateUrl: 'components/crud-component/warehouse/warehouseView.html',
-      controller: 'ShipmentController',
+      controller: 'WarehouseController',
       resolve: {
         checkLoggedIn: checkLoggedIn
       }
     })
     .when('/orders', {
       templateUrl: 'components/crud-component/orders/ordersView.html',
-      controller: 'ShipmentController',
+      controller: 'OrderController',
+      resolve: {
+        checkLoggedIn: checkLoggedIn
+      }
+    })
+    .when('/customers', {
+      templateUrl: 'components/crud-component/customers/customerView.html',
+      controller: 'CustomerController',
       resolve: {
         checkLoggedIn: checkLoggedIn
       }

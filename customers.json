@@ -1,0 +1,177 @@
+[
+    {
+        "customerID": 1,
+        "name": "Rajesh Kumar",
+        "email": "rajesh.kumar@example.com",
+        "phone": "9876543210",
+        "address": "123, Main Street"
+    },
+    {
+        "customerID": 2,
+        "name": "Priya Sharma",
+        "email": "priya.sharma@example.com",
+        "phone": "8765432109",
+        "address": "456, Park Avenue"
+    },
+    {
+        "customerID": 3,
+        "name": "Amit Patel",
+        "email": "amit.patel@example.com",
+        "phone": "7654321098",
+        "address": "789, Elm Road"
+    },
+    {
+        "customerID": 4,
+        "name": "Sneha Gupta",
+        "email": "sneha.gupta@example.com",
+        "phone": "6543210987",
+        "address": "101, Lake View"
+    },
+    {
+        "customerID": 5,
+        "name": "Vikram Singh",
+        "email": "vikram.singh@example.com",
+        "phone": "5432109876",
+        "address": "222, Garden Street"
+    },
+    {
+        "customerID": 6,
+        "name": "Anita Verma",
+        "email": "anita.verma@example.com",
+        "phone": "4321098765",
+        "address": "333, Riverside"
+    },
+    {
+        "customerID": 7,
+        "name": "Alok Tiwari",
+        "email": "alok.tiwari@example.com",
+        "phone": "3210987654",
+        "address": "444, Oak Lane"
+    },
+    {
+        "customerID": 8,
+        "name": "Neha Reddy",
+        "email": "neha.reddy@example.com",
+        "phone": "2109876543",
+        "address": "555, Pine Road"
+    },
+    {
+        "customerID": 9,
+        "name": "Arjun Malhotra",
+        "email": "arjun.malhotra@example.com",
+        "phone": "1098765432",
+        "address": "666, Maple Street"
+    },
+    {
+        "customerID": 10,
+        "name": "Meera Singhania",
+        "email": "meera.singhania@example.com",
+        "phone": "0987654321",
+        "address": "777, Birch Avenue"
+    },
+    {
+        "customerID": 11,
+        "name": "Sandeep Khanna",
+        "email": "sandeep.khanna@example.com",
+        "phone": "9876543210",
+        "address": "888, Cedar Lane"
+    },
+    {
+        "customerID": 12,
+        "name": "Pooja Joshi",
+        "email": "pooja.joshi@example.com",
+        "phone": "8765432109",
+        "address": "999, Redwood Drive"
+    },
+    {
+        "customerID": 13,
+        "name": "Rahul Verma",
+        "email": "rahul.verma@example.com",
+        "phone": "7654321098",
+        "address": "111, Willow Street"
+    },
+    {
+        "customerID": 14,
+        "name": "Deepika Nair",
+        "email": "deepika.nair@example.com",
+        "phone": "6543210987",
+        "address": "222, Pinecrest Road"
+    },
+    {
+        "customerID": 15,
+        "name": "Vivek Sharma",
+        "email": "vivek.sharma@example.com",
+        "phone": "5432109876",
+        "address": "333, Forest Avenue"
+    },
+    {
+        "customerID": 16,
+        "name": "Sunita Kapoor",
+        "email": "sunita.kapoor@example.com",
+        "phone": "4321098765",
+        "address": "444, Magnolia Lane"
+    },
+    {
+        "customerID": 17,
+        "name": "Amitabh Desai",
+        "email": "amitabh.desai@example.com",
+        "phone": "3210987654",
+        "address": "555, Laurel Drive"
+    },
+    {
+        "customerID": 18,
+        "name": "Neeraj Rajput",
+        "email": "neeraj.rajput@example.com",
+        "phone": "2109876543",
+        "address": "666, Willow Avenue"
+    },
+    {
+        "customerID": 19,
+        "name": "Seema Mehra",
+        "email": "seema.mehra@example.com",
+        "phone": "1098765432",
+        "address": "777, Birchwood Lane"
+    },
+    {
+        "customerID": 20,
+        "name": "Vikas Jain",
+        "email": "vikas.jain@example.com",
+        "phone": "0987654321",
+        "address": "888, Oakwood Drive"
+    },
+    {
+        "customerID": 21,
+        "name": "Rajendra Yadav",
+        "email": "rajendra.yadav@example.com",
+        "phone": "9876543210",
+        "address": "999, Cherry Lane"
+    },
+    {
+        "customerID": 22,
+        "name": "Swati Bhatia",
+        "email": "swati.bhatia@example.com",
+        "phone": "8765432109",
+        "address": "1010, Willow Lane"
+    },
+    {
+        "customerID": 23,
+        "name": "Rajni Mehta",
+        "email": "rajni.mehta@example.com",
+        "phone": "7654321098",
+        "address": "1111, Redwood Avenue"
+    },
+    {
+        "customerID": 24,
+        "name": "Alok Gupta",
+        "email": "alok.gupta@example.com",
+        "phone": "6543210987",
+        "address": "1212, Cedar Lane"
+    },
+    {
+        "customerID": 25,
+        "name": "Neha Malhotra",
+        "email": "neha.malhotra@example.com",
+        "phone": "5432109876",
+        "address": "1313, Oakwood Lane"
+    }
+]
